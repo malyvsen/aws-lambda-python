@@ -11,6 +11,8 @@ provider "aws" {
   region = "eu-central-1"
 }
 
+data "aws_region" "current" {}
+
 resource "aws_iam_role" "lambda" {
   name = "matrix-inverse-lambda-role"
 
@@ -36,4 +38,12 @@ resource "aws_lambda_function" "main" {
   image_uri     = "${var.ecr_repository_url}:${var.image_tag}"
   architectures = ["arm64"]
   timeout       = 10
+}
+
+output "function_name" {
+  value = aws_lambda_function.main.function_name
+}
+
+output "aws_region" {
+  value = data.aws_region.current.name
 }
