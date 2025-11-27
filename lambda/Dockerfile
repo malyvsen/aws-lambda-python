@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.13-arm64
+FROM public.ecr.aws/lambda/python:3.14-arm64
 
 # Install uv for fast dependency management
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv

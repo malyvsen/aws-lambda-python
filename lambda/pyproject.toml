@@ -2,7 +2,7 @@
 name = "matrix-inverter"
 version = "0.1.2"
 description = "Inverts matrices - test lambda"
-requires-python = ">=3.13,<3.14"
+requires-python = ">=3.14,<3.15"
 dependencies = [
     "aws-lambda-typing",
     "numpy>=2.3.5",
