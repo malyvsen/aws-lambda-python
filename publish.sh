@@ -19,6 +19,7 @@ aws ecr get-login-password --region "${REGION}" | docker login --username AWS --
 echo "==> Building container image..."
 docker build \
   --platform=linux/arm64 \
+  --provenance=false \
   -t "${ECR_REPO}:${IMAGE_TAG}" \
   "${LAMBDA_DIR}"
 
