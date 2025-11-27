@@ -34,6 +34,13 @@ Just run `./publish.sh` from the project root. This will:
 
 Then run the terraform apply command printed by the script to update the Lambda function.
 
+### Testing
+
+Run `./test.sh` to invoke the deployed Lambda with a sample matrix and verify the response:
+```bash
+./test.sh
+```
+
 ### Usage
 
 ```json
