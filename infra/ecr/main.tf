@@ -14,7 +14,8 @@ provider "aws" {
 data "aws_region" "current" {}
 
 resource "aws_ecr_repository" "lambda" {
-  name = "matrix-inverse-lambda"
+  name         = "matrix-inverse-lambda"
+  force_delete = true
 }
 
 output "ecr_repository_url" {
